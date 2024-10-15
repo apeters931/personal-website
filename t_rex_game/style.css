@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+#myDropdown {
+    width: 215px;
+}
+
+#board {
+    background-color: lightgray;
+    border-bottom: 1px solid black;
+}
