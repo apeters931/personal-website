@@ -44,10 +44,10 @@ let gravity = .4;
 let gameOver = false;
 let score = 0;
 
-window.onload = function() {
+function game() {
     dropdown = document.getElementById("myDropdown");
     dinoChar = dropdown.value;
-    board = document.getElementById("board");
+    board = document.getElementById("board-start");
     board.height = boardHeight;
     board.width = boardWidth;
 
@@ -174,4 +174,8 @@ function detectCollision(a, b) {
            a.x + a.width > b.x &&   //a's top right corner passes b's top left corner
            a.y < b.y + b.height &&  //a's top left corner doesn't reach b's bottom left corner
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
+}
+
+document.getElementById("play-button").onclick = function() {
+    game()
 }
