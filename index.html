@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, inital-scale=1.0">
-        <title>Alec Peters</title>
-        <link rel="icon" type="image/png" href="headshot_small.png">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alec Peters</title>
+    <link rel="icon" type="image/png" href="img/headshot_pixelated.png">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="off-screen-menu">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="https://github.com/apeters931">github</a></li>
+        <li><a href="https://www.linkedin.com/in/alec-peters/">linkedin</a></li>
+      </ul>
+    </div>
 
-    <body>
-        <section class="header">
-            <img src="headshot.png" width="200" alt="headshot">
-            <h1 class="header-name">Alec Peters</h1>
-        </section>
-        <footer class="nav">
-            <a href="https://github.com/apeters931" class="nav_link">
-                <img src="github.png" width="40">
-            </a>
-            <a href="contact.html" class="nav_link">
-                <img src="envelope.png" width="50">
-            </a>
-            <a href="https://www.linkedin.com/in/alec-peters/" class="nav_link">
-                <img src="linkedin.png" width="40">
-            </a>
-            <a href="music.html" class="nav_link">
-                <img src="music_note.png" width="40">
-            </a>
-        </footer>
-    </body>
+    <nav>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <section class="header" id="header">
+        <img src="img/headshot_pixelated.png" width="220" alt="headshot" class="img">
+    </section>
+
+    <canvas id="board" class="hide-objects"></canvas>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

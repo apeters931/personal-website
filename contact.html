@@ -4,10 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Alec Peters</title>
+        <link rel="icon" type="image/png" href="img/headshot_pixelated.png">
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        Contact
+      <div class="off-screen-menu">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="https://github.com/apeters931">github</a></li>
+            <li><a href="https://www.linkedin.com/in/alec-peters/">linkedin</a></li>
+        </ul>
+      </div>
+
+      <nav>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </nav>
+
+      <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+          <div class="contact-left-title">
+            <h2>Get in touch</h2>
+            <hr>
+          </div>
+          <input type="hidden" name="access_key" value="548cc90b-5efa-46d1-b563-c79fef39af8b">
+          <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+          <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+          <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+          <button type="submit">Submit</button>   
+        </form>
+      </div>
+    
+      <script src="./script.js"></script>
     </body>
 </html>
