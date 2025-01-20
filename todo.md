@@ -1,11 +1,8 @@
 ## index
-- make jumping in dino game smoother
 - figure out why sometimes the game starts right away after you die
 - add yellow bird
     - bird needs to be able to flap it's wings
     - bird comes at two different heights, one you can jump over, one you can only duck under
-- add something so people know they can click on my face to play a game
-- have cursor change when you hover over head
 
 ## about me
 - make look more like old school myspace or facebook page
