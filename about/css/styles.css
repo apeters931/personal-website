@@ -4,138 +4,48 @@ Global
 ========================================
 */
 html {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
- 
+  
 *, *:before, *:after {
- box-sizing: inherit;
- list-style-type: none;
- 
+  box-sizing: inherit;
+  list-style-type: none;
+  
 }
- 
+  
 body {
- font-family: verdana, arial, sans-serif, helvetica;
- background-color: rgb(239, 234, 234);
- font-size: 8pt;
- margin: 0;
+  font-family: verdana, arial, sans-serif, helvetica;
+  background-color: rgb(239, 234, 234);
+  font-size: 8pt;
+  margin: 0;
 }
- 
+  
 a {
- font-weight: bold;
- text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
 }
- 
+  
 a:link {
- color: #009957;
+  color: #009957;
 }
- 
+  
 a:visited {
- color: #009957;
+  color: #009957;
 }
- 
+  
 a:hover {
- text-decoration: underline;
- color: #cc0000;
+  text-decoration: underline;
+  color: #cc0000;
 }
- 
+  
 h2 {
- font-size: 9pt;
- margin: 0;
- font-weight: bold;
+  font-size: 9pt;
+  margin: 0;
+  font-weight: bold;
 }
- 
+  
 p {
- line-height: 1.3;
-}
-
-/*
-========================================
-Ham Menu
-========================================
-*/
-
-a {
-    color: black;
-}
-a:visited {
-    color: black;
-}
-a:hover {
-    color: #77cc8b;
-}
-
-/* off-screen-menu */
-.off-screen-menu {
-    background-color: rgb(239, 234, 234);
-    height: 100vh;
-    width: 100%;
-    max-width: 250px;
-    position: fixed;
-    top: 0;
-    right: -450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    justify-content: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .3s ease;
-    font-family: sans-serif;
-    text-decoration: none;
-}
-.off-screen-menu.active {
-    right: 0;
-    font-family: sans-serif;
-    text-decoration: none;
-}
-
-/* nav */
-nav {
-    padding: 1rem;
-    display: flex;
-    background-color: rgb(239, 234, 234);
-    font-family: sans-serif;
-    text-decoration: none;
-    list-style: none;
-}
-
-/* ham menu */
-.ham-menu {
-    height: 50px;
-    width: 40px;
-    margin-left: auto;
-    position: relative;
-}
-.ham-menu span {
-    height: 5px;
-    width: 100%;
-    background-color: black;
-    border-radius: 25px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-}
-.ham-menu span:nth-child(1) {
-    top: 25%;
-}
-.ham-menu span:nth-child(3) {
-    top: 75%;
-}
-.ham-menu.active span {
-    background-color: black;
-}
-.ham-menu.active span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-.ham-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-.ham-menu.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+  line-height: 1.3;
 }
 
 /*
@@ -145,48 +55,36 @@ Tabs
 */
 
 .tabs {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 400px;
-  font-family: sans-serif;
-  margin-left: 300px;
+  font-size: 0;
+  margin-bottom:10px;
 }
 
-.tabs__label {
-  padding: 10px 16px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 20px;
-  color: #77cc8b;
-  background-color: rgb(239, 234, 234);e;
-  border-left: 2px solid #77cc8b;
-  border-right: 2px solid #77cc8b;
-  border-top: 2px solid #77cc8b;
-}
-
-.tabs__radio {
-  display: none;
-}
-
-.tabs__content {
-  order: 1;
-  width: 100%;
-  display: none;
-}
-
-.tabs__radio:checked + .tabs__label {
-  font-weight: bold;
-  color: #77cc8b;
+.myspace-button {
+  margin-left: 278px;;
+  border: 1px solid rgb(0, 153, 106);
+  padding: 10px 24px;
+  border-radius: 0px;
   background-color: white;
-  border-left: 2px solid #77cc8b;
-  border-right: 2px solid #77cc8b;
-  border-top: 2px solid #77cc8b;
+  font-size: 15px;
 }
 
-.tabs__radio:checked + .tabs__label + .tabs__content {
-  display: initial;
+.myspace-button:hover {
+  color: rgb(102, 204, 151);
 }
 
+.facebook-button {
+  border: 1px solid rgb(0, 153, 106);
+  border-left: 0px solid rgb(0, 153, 106);
+  padding: 10px 24px;
+  border-radius: 0px;
+  background-color: rgb(239, 234, 234);
+  font-size: 15px;
+}
+
+.facebook-button:hover {
+  color: rgb(102, 204, 151)
+}
+  
 /*
 ========================================
 Master Container
@@ -194,10 +92,10 @@ Master Container
 */
 .master-container {
   margin: auto;
-  width: 800px;
+  width: 915px;
   background-color: white;
 }
-
+  
 /*
 ========================================
 Main Header
@@ -810,6 +708,92 @@ footer small {
   font-weight: normal;
 }
 
+.off-screen-menu a {
+  color: black;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+.off-screen-menu a:visited {
+  color: black;
+}
+.off-screen-menu a:hover {
+  color: #77cc8b;
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+  background-color: rgb(239, 234, 234);
+  height: 100vh;
+  width: 100%;
+  max-width: 250px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3s ease;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+.off-screen-menu.active {
+  right: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+/* nav */
+.ham-nav {
+  padding: 1rem;
+  display: flex;
+  background-color: rgb(239, 234, 234);
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* ham menu */
+.ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+}
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.ham-menu.active span {
+  background-color: black;
+}
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 /*
 ========================================
 facebook
@@ -822,351 +806,350 @@ Master Container
 ========================================
 */
 .master-container-facebook {
-  margin: auto;
-  width: 915px;
-  background-color: white;
-  border: 2px solid rgb(0, 153, 106);
- }
-  
- /*
- ========================================
- Main Header
- ========================================
- */
- .main-header-facebook {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100px;
-  background-color: rgb(0, 153, 106);
-  color: #ffffff;
- }
+ margin: auto;
+ width: 915px;
+ background-color: white;
+ border: 2px solid rgb(0, 153, 106);
+}
  
- .main-header-facebook h1 {
-   color: #77cc8b;
-   font-size: 45px;
-   padding-left: 470px;
- }
-  
- .main-header-facebook ul {
-  list-style-type: none;
- }
+/*
+========================================
+Main Header
+========================================
+*/
+.main-header-facebook {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ height: 100px;
+ background-color: rgb(0, 153, 106);
+ color: #ffffff;
+}
+
+.main-header-facebook h1 {
+  color: #77cc8b;
+  font-size: 45px;
+  padding-left: 470px;
+}
  
- .main-header-facebook a:link {
-  color: #ffffff;
-  font-weight: normal;
- }
-  
- .main-header-facebook a:visited {
-  color: #ffffff;
- }
-  
- /*
- ========================================
- Search Bar
- ========================================
- */
- .search-bar-facebook {
-  width: 200px;
-  height: 75px;
-  padding-left: 17px;
-  padding-top: 10px;
-  font-size: 15px;
-  border: 2px dashed rgb(0, 153, 106);
- }
-  
- .search-bar-facebook form {
-  justify-self: center;
-  margin: 0;
- }
+.main-header-facebook ul {
+ list-style-type: none;
+}
+
+.main-header-facebook a:link {
+ color: #ffffff;
+ font-weight: normal;
+}
  
- .search-bar-facebook form [type="text"] {
-  width: 160px;
-  height: 25px;
-  background-color: rgb(239, 234, 234);
- }
+.main-header-facebook a:visited {
+ color: #ffffff;
+}
  
- .search-bar-facebook form [type="radio"] {
-  margin-right: .33rem;
- }
- 
- .search-bar-facebook ul {
-  display: flex;
- }
- 
- .submit-btn-facebook {
-  margin: 5px;
-  border: 1px solid black;
-  padding: 3px 13px;
-  background-color: #77cc8b;;
-  font-size: 12px;
-  border-color: rgb(186, 186, 186);
-  color: white;
- }
- 
- .topnav-facebook {
-  padding: 0;
-  margin: 8px;
- }
- 
- .topnav-facebook li:first-child::after {
-  content: '|';
-  margin: .33rem;
- }
- 
- .list-options-facebook {
+/*
+========================================
+Search Bar
+========================================
+*/
+.search-bar-facebook {
  width: 200px;
- height: 175px;
- margin-top: 5px;
- padding-left: 10px;
+ height: 75px;
+ padding-left: 17px;
  padding-top: 10px;
  font-size: 15px;
  border: 2px dashed rgb(0, 153, 106);
- }
+}
  
- /*
- ========================================
- Navigation Bar
- ========================================
- */
- .navbar-facebook {
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-  background-color: rgb(0, 153, 106);
-  height: 26px;
-  padding-left: 395px;
- }
- 
- .navbar-facebook ul {
-  display: flex;
-  margin: 0 auto;
-  padding: 0;
- }
- 
- .navbar-facebook li::after {
-  content: '|';
-  margin: .33rem;
-  color:  rgb(0, 153, 106);
- }
- 
- .navbar-facebook li:last-child::after {
-  content: '';
- }
- 
- .navbar-facebook a:hover {
-  color: #77cc8b;
- }
- 
- /*
- ========================================
- Boxes
- ========================================
- */
- .main-section-facebook {
- display: grid; 
- grid-template-columns: 200px 700px;
- }
- 
- .side-bar-facebook {
-   grid-column-start: 1;
-   grid-column-end: 1;
-   height: 1000px;
-   width: 200px;
-   margin-top: 4px;
-   margin-bottom: 10px;
-   margin-left: 4px;
- }
- 
- .main-box-facebook {
-   grid-column-start: 2;
-   grid-column-end: 2;
-   display: grid;
-   grid-template-columns: 310px 385px;
-   grid-template-rows: 30px 165px 65px 85px 85px 550px;
-   border: 2px solid rgb(0, 153, 106);
-   height: 1000px;
-   width: 697px;
-   margin-top: 4px;
-   margin-bottom: 10px;
-   margin-left: 10px;
- }
- 
- .contact-box-facebook {
+.search-bar-facebook form {
+ justify-self: center;
+ margin: 0;
+}
+
+.search-bar-facebook form [type="text"] {
+ width: 160px;
+ height: 25px;
+ background-color: rgb(239, 234, 234);
+}
+
+.search-bar-facebook form [type="radio"] {
+ margin-right: .33rem;
+}
+
+.search-bar-facebook ul {
+ display: flex;
+}
+
+.submit-btn-facebook {
+ margin: 5px;
+ border: 1px solid black;
+ padding: 3px 13px;
+ background-color: #77cc8b;;
+ font-size: 12px;
+ border-color: rgb(186, 186, 186);
+ color: white;
+}
+
+.topnav-facebook {
+ padding: 0;
+ margin: 8px;
+}
+
+.topnav-facebook li:first-child::after {
+ content: '|';
+ margin: .33rem;
+}
+
+.list-options-facebook {
+width: 200px;
+height: 175px;
+margin-top: 5px;
+padding-left: 10px;
+padding-top: 10px;
+font-size: 15px;
+border: 2px dashed rgb(0, 153, 106);
+}
+
+/*
+========================================
+Navigation Bar
+========================================
+*/
+.navbar-facebook {
+ display: flex;
+ align-items: center;
+ margin-top: auto;
+ background-color: rgb(0, 153, 106);
+ height: 26px;
+ padding-left: 395px;
+}
+
+.navbar-facebook ul {
+ display: flex;
+ margin: 0 auto;
+ padding: 0;
+}
+
+.navbar-facebook li::after {
+ content: '|';
+ margin: .33rem;
+ color:  rgb(0, 153, 106);
+}
+
+.navbar-facebook li:last-child::after {
+ content: '';
+}
+
+.navbar-facebook a:hover {
+ color: #77cc8b;
+}
+
+/*
+========================================
+Boxes
+========================================
+*/
+.main-section-facebook {
+display: grid; 
+grid-template-columns: 200px 700px;
+}
+
+.side-bar-facebook {
   grid-column-start: 1;
   grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  height: 1000px;
+  width: 200px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+
+.main-box-facebook {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-columns: 310px 385px;
+  grid-template-rows: 30px 165px 65px 85px 85px 550px;
   border: 2px solid rgb(0, 153, 106);
-  height: 149px;
+  height: 1000px;
+  width: 697px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.contact-box-facebook {
+ grid-column-start: 1;
+ grid-column-end: 1;
+ grid-row-start: 2;
+ grid-row-end: 2;
+ border: 2px solid rgb(0, 153, 106);
+ height: 149px;
+ width: 300px;
+ margin-left: 10px;
+}
+
+.connection-box-facebook {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  border: 2px solid rgb(0, 153, 106);
+  height: 50px;
   width: 300px;
   margin-left: 10px;
- }
- 
- .connection-box-facebook {
-   grid-column-start: 1;
-   grid-column-end: 1;
-   grid-row-start: 3;
-   grid-row-end: 3;
-   border: 2px solid rgb(0, 153, 106);
-   height: 50px;
-   width: 300px;
-   margin-left: 10px;
- }
- 
- .mutual-friends-box-facebook {
-   grid-column-start: 1;
-   grid-column-end: 1;
-   grid-row-start: 4;
-   grid-row-end: 4;
-   border: 2px solid rgb(0, 153, 106);
-   height: 70px;
-   width: 300px;
-   margin-left: 10px;
- }
- 
- .access-box-facebook {
-   grid-column-start: 1;
-   grid-column-end: 1;
-   grid-row-start: 5;
-   grid-row-end: 5;
-   border: 2px solid rgb(0, 153, 106);
-   height: 70px;
-   width: 300px;
-   margin-left: 10px;
- }
- 
- .friends-box-facebook {
-   grid-column-start: 1;
-   grid-column-end: 1;
-   grid-row-start: 6;
-   grid-row-end: 6;
-   border: 2px solid rgb(0, 153, 106);
-   height: 555px;
-   width: 300px;
-   margin-left: 10px;
- }
- 
- .info-box-facebook {
-   grid-column-start: 2;
-   grid-column-end: 2;
-   grid-row-start: 2;
-   grid-row-end: 6;
-   border: 2px solid rgb(0, 153, 106);
-   height: 955px;
-   width: 365px;
-   margin-left: 10px;
- }
- 
- .contact-box-facebook h2 {
+}
+
+.mutual-friends-box-facebook {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  border: 2px solid rgb(0, 153, 106);
+  height: 70px;
+  width: 300px;
+  margin-left: 10px;
+}
+
+.access-box-facebook {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 5;
+  grid-row-end: 5;
+  border: 2px solid rgb(0, 153, 106);
+  height: 70px;
+  width: 300px;
+  margin-left: 10px;
+}
+
+.friends-box-facebook {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 6;
+  grid-row-end: 6;
+  border: 2px solid rgb(0, 153, 106);
+  height: 555px;
+  width: 300px;
+  margin-left: 10px;
+}
+
+.info-box-facebook {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  border: 2px solid rgb(0, 153, 106);
+  height: 955px;
+  width: 365px;
+  margin-left: 10px;
+}
+
+.contact-box-facebook h2 {
+ color: white;
+ background-color: rgb(0, 153, 106);
+ height: 17px;
+ padding-left: 10px;
+}
+
+.main-box-facebook h2 {
   color: white;
   background-color: rgb(0, 153, 106);
   height: 17px;
   padding-left: 10px;
- }
- 
- .main-box-facebook h2 {
-   color: white;
-   background-color: rgb(0, 153, 106);
-   height: 17px;
-   padding-left: 10px;
- }
- 
- .connection-box-facebook h2 {
-   color: white;
-   background-color: rgb(0, 153, 106);
-   height: 17px;
-   padding-left: 10px;
- }
- 
- .mutual-friends-box-facebook h2 {
-   color: white;
-   background-color: rgb(0, 153, 106);
-   height: 17px;
-   padding-left: 10px;
- }
- 
- .access-box-facebook h2 {
-   color: white;
-   background-color: rgb(0, 153, 106);
-   height: 17px;
-   padding-left: 10px;
- }
- 
- .friends-box-facebook h2 {
-   color: white;
-   background-color: rgb(0, 153, 106);
-   height: 17px;
-   padding-left: 10px;
- }
- 
- .info-box-facebook h2 {
-   color: white;
-   background-color: rgb(0, 153, 106);
-   height: 17px;
-   padding-left: 10px;
- }
- 
- .contact-images-facebook {
-  display: grid;
-  grid-template-columns: 150px 150px;
-  margin: 0;
-  margin-top: 5px;
-  margin-left: 10px;
- }
- 
- .header-2-facebook {
-   grid-column-start: 2;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 1;
-   background-color: rgb(0, 153, 106);
-   height: 17px;
- }
- 
- /*
- ========================================
- Footer
- ========================================
- */
- .footer-facebook {
-  display: grid;
-  grid-template-rows: 16px 39px;
-  background-color: rgb(239, 234, 234);
-  padding-top: 10px;
-  height: 65px;
- }
- 
- .footer-facebook a {
-  text-decoration: underline;
-  font-weight: normal;
-  font-size: 8pt;
- }
- 
- .footer-facebook ul {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
- }
- 
- .footer-facebook li:after {
-  content: ' | ';
-  font-weight: normal;
- }
- 
- #last:after {
-  content: none;
- }
- 
- .footer-facebook small {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100%;
-  font-size: 8pt;
-  font-weight: normal;
- }
- 
+}
+
+.connection-box-facebook h2 {
+  color: white;
+  background-color: rgb(0, 153, 106);
+  height: 17px;
+  padding-left: 10px;
+}
+
+.mutual-friends-box-facebook h2 {
+  color: white;
+  background-color: rgb(0, 153, 106);
+  height: 17px;
+  padding-left: 10px;
+}
+
+.access-box-facebook h2 {
+  color: white;
+  background-color: rgb(0, 153, 106);
+  height: 17px;
+  padding-left: 10px;
+}
+
+.friends-box-facebook h2 {
+  color: white;
+  background-color: rgb(0, 153, 106);
+  height: 17px;
+  padding-left: 10px;
+}
+
+.info-box-facebook h2 {
+  color: white;
+  background-color: rgb(0, 153, 106);
+  height: 17px;
+  padding-left: 10px;
+}
+
+.contact-images-facebook {
+ display: grid;
+ grid-template-columns: 150px 150px;
+ margin: 0;
+ margin-top: 5px;
+ margin-left: 10px;
+}
+
+.header-2-facebook {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background-color: rgb(0, 153, 106);
+  height: 17px;
+}
+
+/*
+========================================
+Footer
+========================================
+*/
+.footer-facebook {
+ display: grid;
+ grid-template-rows: 16px 39px;
+ background-color: rgb(239, 234, 234);
+ padding-top: 10px;
+ height: 65px;
+}
+
+.footer-facebook a {
+ text-decoration: underline;
+ font-weight: normal;
+ font-size: 8pt;
+}
+
+.footer-facebook ul {
+ display: flex;
+ flex-wrap: nowrap;
+ justify-content: space-between;
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+}
+
+.footer-facebook li:after {
+ content: ' | ';
+ font-weight: normal;
+}
+
+#last:after {
+ content: none;
+}
+
+.footer-facebook small {
+ display: flex;
+ justify-content: center;
+ align-items: flex-end;
+ height: 100%;
+ font-size: 8pt;
+ font-weight: normal;
+}

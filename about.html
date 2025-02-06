@@ -1,204 +1,652 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, inital-scale=1.0">
-        <title>Alec Peters</title>
-        <link rel="icon" type="image/png" href="img/headshot_pixelated.png">
-        <link rel="stylesheet" href="about.css">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Alec Peters</title>
+    <link rel="icon" type="image/png" href="img/headshot_pixelated.png">
+    <link rel="stylesheet" href="about/css/normalize.css">
+    <link rel="stylesheet" href="about.css">
+  </head>
 
-    <body>
-        <!-- ham menu content -->
-        <div class="off-screen-menu">
-            <ul>
-              <li><a href="index.html">home</a></li>
-              <li><a href="about.html">about</a></li>
-              <li><a href="contact.html">contact</a></li>
-              <li><a href="https://github.com/apeters931">github</a></li>
-              <li><a href="https://www.linkedin.com/in/alec-peters/">linkedin</a></li>
+<body>
+  <!-- ham menu content -->
+  <div class="off-screen-menu">
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="https://github.com/apeters931">github</a></li>
+      <li><a href="https://www.linkedin.com/in/alec-peters/">linkedin</a></li>
+    </ul>
+  </div>
+
+  <!-- ham menu -->
+  <nav>
+    <div class="ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- tabs -->
+  <div class="tabs">
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+    <label for="tab1" class="tabs__label">Mysapce View</label>
+    <div class="tabs__content">
+      <div class="master-container">
+        <!-- Main Header Begins -->
+        <div class="main-header">
+          <nav class="search-bar">
+    
+            <ul class="topnav home">
+              <li><a href="#">MySpace.com</a></li>
+              <li><a href="#">Home</a></li>
             </ul>
-          </div>
-
-          <!-- ham menu -->
-          <nav>
-            <div class="ham-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+    
+            <form>
+              <label>
+                The Web
+                <input type="radio" name="search-type" value="the-web">
+              </label>
+    
+              <label>
+                MySpace
+                <input type="radio" name="search-type" value="myspace">
+              </label>
+    
+              <label>
+                <input type="text" name="search">
+              </label>
+    
+              <input class="submit-btn" type="submit" name="submit-button" value="Search">
+            </form>
+    
+            <ul class="topnav signup">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">SignUp</a></li>
+            </ul>
           </nav>
-
-          <div class="header-bar">
-            <p>about me</p>
-          </div>
-
-          <div class="master-container">
-        
-            <!-- Profile and about me section -->
-            <div class="page-content-container">
-        
-              <!-- Profile Sidebar Begins -->
-              <aside class="profile-sidebar">
-        
-                <header>
-                  <h1>Alec Peters</h1>
-                </header>
-        
-                <!-- Profile Picture -->
-                <div class="profile-picture-container">
-                  <img class="profile-pic" src="img/headshot_medium.png" alt="A profile picture">
-        
-                  <p class="personal-msg"><b>":-P"</b></p>
-        
-                  <ul class="gender-age">
-                    <li>Male</li>
-                    <li>26 years old</li>
-                    <li>Madison,</li>
-                    <li>WISCONSIN</li>
-                    <li>United States</li>
-                  </ul>
-        
-                  <p class="pics-videos">View My: <a href="pics.html"><b>Pics</b></a> | <a href="videos.html"><b>Videos</b></a></p>
-                </div>
-              </aside>
-              <!-- Profile Side Bar Ends -->
-        
-              <!-- Main Section -->
-              <main>
-        
-                  <h3>Bio:</h3>
-                  <p>I'm a data engineering / analytics engineering consultant from Madison WI. In my free time I enjoy creating / listening to music, watching movies, and playing with my cats.</p>
-                  <p>Learn more about me in the info below.</p>
-                  <p>Click here to see my full <a href="resume.pdf"><b>resume</b></a></p>
-        
-              </main>
+    
+          <nav class="navbar">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Browse</a></li>
+              <li><a href="#">Search</a></li>
+              <li><a href="#">Invite</a></li>
+              <li><a href="#">Film</a></li>
+              <li><a href="#">Mail</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Favorites</a></li>
+              <li><a href="#">Forum</a></li>
+              <li><a href="#">Groups</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Classifieds</a></li>
+            </ul>
+          </nav>
+    
+        </div>
+        <!-- Main Header Ends -->
+    
+        <div class="page-content-container">
+    
+          <!-- Profile Sidebar Begins -->
+          <aside class="profile-sidebar">
+    
+            <header>
+              <h1>Alec Peters</h1>
+            </header>
+    
+            <!-- Profile Picture -->
+            <div class="profile-picture-container">
+              <img class="profile-pic" src="about/pictures/alecpeters2.jpg" alt="A profile picture of Alec, the creator of MySpace.">
+    
+              <p class="personal-msg"><b>":-)"</b></p>
+    
+              <ul class="gender-age">
+                <li>Male</li>
+                <li>26 years old</li>
+                <li>Madison,</li>
+                <li>WISCONSIN</li>
+                <li>United States</li>
+              </ul>
+    
+              <ul class="last-login">
+                <li>Last Login:</li>
+                <li>1/22/2025</li>
+              </ul>
+    
+              <p class="pics-videos">View My: <a href="#"><b>Pics</b></a> | <a href="#"><b>Videos</b></a></p>
             </div>
-            <!-- Tables Section -->
-            <div class="table-container">
-                <!-- Interests Section -->
-              <section class="interests">
-                <table class="sidebar-table">
-          
-                  <caption>
-                    <h2 class="sidebar-table-h2">Alec's Interests</h2>
-                  </caption>
-          
-                  <tbody>
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">General</th>
-                      <td class="sidebar-table-data">
+    
+            <!-- Contact Box -->
+            <section class="contact-box">
+              <h2>Contacting Alec</h2>
+    
+              <figure class="contact-images">
+                <img src="about/pictures/sendMailIcon.gif" alt="Send Message">
+                <img src="about/pictures/forwardMailIcon.gif" alt="Forward to Friend">
+                <img src="about/pictures/addFriendIcon.gif" alt="Add to Friends">
+                <img src="about/pictures/addFavoritesIcon.gif" alt="Add to Favorites">
+                <img src="about/pictures/messagefriend.gif" alt="Instant Message">
+                <img src="about/pictures/blockUser.gif" alt="Block User">
+                <img src="about/pictures/addToGroupIcon.gif" alt="Add to Group">
+                <img src="about/pictures/rankUserIcon.gif" alt="Rank User">
+              </figure>
+            </section>
+    
+            <!-- MySpace URL -->
+            <section class="myspace-url-box">
+              <h3><b>MySpace URL:</b></h3>
+              <p>http://www.myspace.com/Alec</p>
+            </section>
+    
+            <!-- Interests Section -->
+            <section class="interests">
+              <table class="sidebar-table">
+    
+                <caption>
+                  <h2 class="sidebar-table-h2">Alec's Interests</h2>
+                </caption>
+    
+                <tbody>
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">General</th>
+                    <td class="sidebar-table-data">
                       <p>60s & early 70s rock, Movies, Basketball, Thrift shopping, Playing guitar, Writing Music, Trivia, Indoor Waterparks</p>
-                      </td>
-                    </tr>
-          
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">Music</th>
-                      <td class="sidebar-table-data">
+                    </td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Music</th>
+                    <td class="sidebar-table-data">
                       <p><b>Bands</b>: Beatles, Strokes, Red Hot Chilli Peppers, Led Zepplin, Smiths, Rolling Stones, Brockhampton, Allman Brothers, Pink Floyd, Weezer, Radiohead, Oasis, Supergrass, The Velvet Underground, The Cure, Neuteral Milk Hotel</p>
-          
+    
                       <p><b>Solo Artists</b>: Elliot Smith, Elton John, Billy Joel, David Bowie, Bob Dylan, John Mayer, John Frusciante, Kendric Lamar, Mac Miller, JID, Tyler the Creator, all of the Beatles solo careers</p>
-          
-                      <p><b>Albums</b>: White Album - Beatles; Abbey Road - Beatles; Led Zepplin II; Blue - Weezer; Saturation I through III - Brockhampton; Good AM - Mac Miller; Good Kid M.A.A.D City - Kendrick Lamar; In the Aeroplane Over the Sea - Neutral Milk Hotel; 3D Country - Geese</p>
-                      </td>
-                    </tr>
-          
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">Movies</th>
-                      <td class="sidebar-table-data">
+    
+                      <p><b>Albums</b>: White Album - Beatles; Abbey Road - Beatles; Led Zepplin II; Blue - Weezer; Saturation I through III - Brockhampton; Good AM - Mac Miller; Good Kid M.A.A.D City - Kendrick Lamar; In the Aeroplane Over the Sea - Neutral Milk Hotel; 3D Country - Geese; Songs in the Key of Life - Stevie Wonder</p>
+    
+                    </td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Movies</th>
+                    <td class="sidebar-table-data">
                       <p><b>Films</b>: It's a Wonderful Life, JoJo Rabit, Shawshank Redemption, Catch Me If You Can, Cool Hand Luke, Knives Out, Gone Girl, Manchester by the Sea, The Holdovers, Goodfellas</p>
-          
+    
                       <p><b>Directors</b>: Stanley Kubrick, Francis Copolla, Quentin Tarantino, Steven Spielberg</p>
-                      </td>
-                    </tr>
-          
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">Television</th>
-                      <td class="sidebar-table-data">
+    
+                      <p>See more about my movie tastes in my <a href="https://letterboxd.com/apeters/"><b>letterboxd</b></a> profile</p>
+                    </td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Television</th>
+                    <td class="sidebar-table-data">
                       <p> I mainly watch live sports and various types of comedy series. My teams are the Green Bay Packers & the Milwaukee Bucks. The different types of comdey shows I'm into are adult animation, sketch comedy, and alternative sitcoms</p>
-                      </td>
-                    </tr>
-          
-                  </tbody>
-                </table>
-              </section>
-          
-              <!-- Alec's Details Section -->
-              <section class="details">
-                <table class="sidebar-table">
-          
-                  <caption>
-                    <h2 class="sidebar-table-h2">Alec's Details</h2>
-                  </caption>
-          
-                  <tbody>
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">Hometown:</th>
-                      <td class="sidebar-table-data">Milwaukee</td>
-                    </tr>
-          
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">Ethnicity:</th>
-                      <td class="sidebar-table-data">White / Caucasian</td>
-                    </tr>
-          
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">Zodiac Sign:</th>
-                      <td class="sidebar-table-data">Gemini</td>
-                    </tr>
-        
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">Occupation:</th>
-                      <td class="sidebar-table-data">Consultant @ Analytics8</td>
-                    </tr>
-          
-                  </tbody>
-                </table>
-              </section>
-          
-              <!-- Alec's Schools Section -->
-              <section class="schools">
-                <table class="sidebar-table">
-          
-                  <caption>
-                    <h2 class="sidebar-table-h2">Alec's Schools</h2>
-                  </caption>
-          
-                  <tbody>
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">
-                        <ul>
-                          <li><a href="#">University Of Wisconsin-Madison</a></li>
-                          <li>Madison, WISCONSIN</li>
-                          <li>Graduated: <a href="#">2021</a></li>
-                          <li>Degree: Master's Degree</li>
-                          <li>Major: Business Analytics</li>
-                        </ul>
-                      </th>
-                      <td class="sidebar-table-data">2020 to 2021</td>
-                    </tr>
-          
-                    <tr>
-                      <th class="sidebar-table-header" scope="row">
-                        <ul>
-                          <li><a href="#">University Of Wisconsin-Madison</a></li>
-                          <li>Madison, WISCONSIN</li>
-                          <li>Graduated: <a href="#">2020</a></li>
-                          <li>Student status: Alumni</li>
-                          <li>Degree: Bachelor's Degree</li>
-                          <li>Major: Statistics & Entrepreneurship</li>
-                        </ul>
-                      </th>
-                      <td class="sidebar-table-data">2016 to 2020</td>
-                    </tr>
+                    </td>
+                  </tr>
+    
+                </tbody>
+              </table>
+            </section>
+    
+            <!-- Alec's Details Section -->
+            <section class="details">
+              <table class="sidebar-table">
+    
+                <caption>
+                  <h2 class="sidebar-table-h2">Alec's Details</h2>
+                </caption>
+    
+                <tbody>
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Status:</th>
+                    <td class="sidebar-table-data">In reltaionship</td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Here For:</th>
+                    <td class="sidebar-table-data">Networking, Friends</td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Hometown:</th>
+                    <td class="sidebar-table-data">Madison</td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Ethnicity:</th>
+                    <td class="sidebar-table-data">White / Caucasian</td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Zodiac Sign:</th>
+                    <td class="sidebar-table-data">Gemini</td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Smoke / Drink:</th>
+                    <td class="sidebar-table-data">No / Yes</td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">Occupation:</th>
+                    <td class="sidebar-table-data">Consultant @ Analytics8</td>
+                  </tr>
+    
+                </tbody>
+              </table>
+            </section>
+    
+            <!-- Alec's Schools Section -->
+            <section class="schools">
+              <table class="sidebar-table">
+    
+                <caption>
+                  <h2 class="sidebar-table-h2">Alec's Schools</h2>
+                </caption>
+    
+                <tbody>
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">
+                      <ul>
+                        <li><a href="#">University Of Wisconsin-Madison</a></li>
+                        <li>Madison, WISCONSIN</li>
+                        <li>Graduated: <a href="#">2000</a></li>
+                        <li>Degree: Master's Degree</li>
+                        <li>Major: Business Analytics</li>
+                      </ul>
+                    </th>
+                    <td class="sidebar-table-data">2020 to 2021</td>
+                  </tr>
+    
+                  <tr>
+                    <th class="sidebar-table-header" scope="row">
+                      <ul>
+                        <li><a href="#">University Of Wisconsin-Madison</a></li>
+                        <li>Madison, WISCONSIN</li>
+                        <li>Graduated: <a href="#">2020</a></li>
+                        <li>Student status: Alumni</li>
+                        <li>Degree: Bachelor's Degree</li>
+                        <li>Major: Statistics</li>
+                      </ul>
+                    </th>
+                    <td class="sidebar-table-data">2016 to 2020</td>
+                  </tr>
+    
+                </tbody>
+              </table>
+    
+            </section>
+          </aside>
+          <!-- Profile Side Bar Ends -->
+    
+          <!-- Main Section -->
+          <main>
+    
+            <section class="user-network">
+              <header>
+                <h2>Alec is in your extended network</h2>
+              </header>
+            </section>
+    
+            <section class="blog">
+              <p><b>Alec's Latest Projects</b></p>
+              <p>Guitar training website (<a href="#">view more</a>) </p>
+              <p>Newest original music (<a href="#">view more</a>) </p>
+              <p>New covers (<a href="#">view more</a>) </p>
+              <p>[<a href="#">View Full Github Profile</a>]</p>
+              <p>[<a href="#">View All Music</a>]</p>
+            </section>
+    
+            <section class="blurbs">
+              <header class="main-section-header">
+                <h2 class="main-section-h2">Alec's Blurbs</h2>
+              </header>
+    
+              <h3>About me:</h3>
+              <p>I'm a data engineering / analytics engineering consultant from Madison WI. In my free time I enjoy creating / listening to music, watching movies, and playing with my cats.</p>
+              <p>Learn more about me in the info below.</p>
+              <p>Click here to see my full <a href="resume.pdf"><b>resume</b></a></p>
+    
+              <h3>Who I'd like to meet:</h3>
+              <p>I'd like to meet people who educate, inspire or entertain me... I have a few close friends I've known all my life. I'd like to make more. </p>
+            </section>
+    
+            <section class="friends">
+              <header class="main-section-header">
+                <h2 class="main-section-h2">Alec's Friend Space</h2>
+              </header>
+    
+              <p><b>Alec has <span class="focus-highlight">73090713</span> Friends.</b></p>
+    
+              <div class="friend-pic-container">
+                <figure>
+                  <figcaption><a href="#">harry styles</a></figcaption>
+                  <img src="about/pictures/harrystyles.jpeg">
+                </figure>
+    
+                <figure>
+                  <figcaption><a href="#">mick jagger</a></figcaption>
+                  <img src="about/pictures/mickjagger.jpeg">
+                </figure>
+    
+                <figure>
+                  <figcaption><a href="#">beyonce</a></figcaption>
+                  <img src="about/pictures/beyonce.jpeg">
+                </figure>
+    
+                <figure>
+                  <figcaption><a href="#">edgar allan poe</a></figcaption>
+                  <img src="about/pictures/eap.jpg">
+                </figure>
+    
+                <figure>
+                  <figcaption><a href="#">timothee chalamet</a></figcaption>
+                  <img src="about/pictures/timmy.jpeg">
+                </figure>
+    
+                <figure>
+                  <figcaption><a href="#">paul newman</a></figcaption>
+                  <img src="about/pictures/paulnewman.jpeg">
+                </figure>
+    
+                <figure>
+                  <figcaption><a href="#">leonardo dicaprio</a></figcaption>
+                  <img src="about/pictures/leo.jpeg">
+                </figure>
+    
+                <figure>
+                  <figcaption><a href="#">cleopatra</a></figcaption>
+                  <img src="about/pictures/cleopatra.jpeg">
+                </figure>
+              </div>
+    
+              <p class="friends-list-link"><a href="#">View All of Alec's Friends</a></p>
+            </section>
+    
+            <section class="comment-wall">
+              <header class="main-section-header">
+                <h2 class="main-section-h2">Alec's Friends Comments</h2>
+              </header>
+    
+              <p id="comment-counter"><b>Displaying <span class="focus-highlight">10</span> of <span class="focus-highlight">780610</span> comments (<a href="#">View/Edit All Comments</a>)</b></p>
+    
+              <table>
+                <tr>
+                  <th scope="row">
+                    <figure>
+                      <figcaption><a href="#">marilyn monroe</a></figcaption>
+                      <img src="about/pictures/marilynmonroe.jpeg">
+                    </figure>
+                  </th>
+                  <td>
+                    <h3>4/22/2006 6:54 PM</h3>
+                    <p>Love your vibe</p>
+                  </td>
+                </tr>
+    
+                <tr>
+                  <th scope="row">
+                    <figure>
+                      <figcaption><a href="#">paul mccartney</a></figcaption>
+                      <img src="about/pictures/paulmccartney.jpeg">
+                    </figure>
+                  </th>
+                  <td>
+                    <h3>4/22/2006 6:51 PM</h3>
+                    <p>you were right, "yesterday" is way better than "scrambled eggs"</p>
+                  </td>
+                </tr>
+    
+                <tr>
+                  <th scope="row">
+                    <figure>
+                      <figcaption><a href="#">lebron</a></figcaption>
+                      <img src="about/pictures/lbj.jpeg">
+                    </figure>
+                  </th>
+                  <td>
+                    <h3>4/22/2006 5:30 PM</h3>
+                    <p>thanks for the help with my jumper :p it's been feeling good lately</p>
+                  </td>
+                </tr>
+    
+                <tr>
+                  <th scope="row">
+                    <figure>
+                      <figcaption><a href="#">muhammad ali</a></figcaption>
+                      <img src="about/pictures/muhammadali.jpeg">
+                    </figure>
+                  </th>
+                  <td>
+                    <h3>4/22/2006 12:37 PM</h3>
+                    <p></p>
+                  </td>
+                </tr>
+    
+                <tr>
+                  <th scope="row">
+                    <figure>
+                      <figcaption><a href="#">Julie Andrews</a></figcaption>
+                      <img src="about/pictures/julieandrews.jpeg">
+                    </figure>
+                  </th>
+                  <td>
+                    <h3>4/22/2006 12:13 PM</h3>
+                    <p></p>
+                  </td>
+                </tr>
+    
+                <tr>
+                  <th scope="row">
+                    <figure>
+                      <figcaption><a href="#">James Dean</a></figcaption>
+                      <img src="about/pictures/james.jpg">
+                    </figure>
+                  </th>
+                  <td>
+                    <h3>4/22/2006 12:04 PM</h3>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
+    
+              <p id="add-comment"><a href="#">Add Comment</a></p>
+    
+            </section>
+          </main>
+    
+    
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+    
+          <nav>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Safety Tips</a></li>
+              <li><a href="#">Contact Myspace</a></li>
+              <li><a href="#">Report Inappropriate Content</a></li>
+              <li><a href="#">Promote!</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li id="last"><a href="#">MySpace International</a></li>
+            </ul>
+          </nav>
+    
+          <small>©2003-2006 MySpace.com. All Rights Reserved.</small>
+        </footer>
+      </div>
+    </div>
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+    <label for="tab2" class="tabs__label">Facebook View</label>
+    <div class="tabs__content">
+      <div class="master-container-facebook">
 
-                  </tbody>
+        <!-- Main Header Begins -->
+        <header class="main-header-facebook">
+    
+          <h1>[thefacebook]</h1>
+    
+          <nav class="navbar-facebook">
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">search</a></li>
+              <li><a href="#">global</a></li>
+              <li><a href="#">social net</a></li>
+              <li><a href="#">invite</a></li>
+              <li><a href="#">faq</a></li>
+              <li><a href="#">logout</a></li>
+            </ul>
+          </nav>
+    
+        </header>
+        <!-- Main Header Ends -->
+    
+        <!-- Main Section Begins -->
+        <div class="main-section-facebook">
+    
+          <!-- Left Side Bar Begins -->
+          <div class="side-bar-facebook">
+    
+            <!-- Search Bar Begins -->
+            <nav class="search-bar-facebook">
+              <form>
+                <label>
+                  <input type="text" name="search">
+                </label>
+                <b>quick search</b>
+                <input class="submit-btn" type="submit" name="submit-button" value="go">
+              </form>
+            </nav>
+            <!-- Search Bar Ends -->
+    
+            <!-- List Options Beigins -->
+            <div class="list-options-facebook"></div>
+            <!-- List Options Ends -->
+    
+          </div>
+          <!-- Left Side Bar Ends -->
+        
+          <!-- Profile Box Begins -->
+          <div class="main-box-facebook">
+                
+            <h2>Alec Peters' Profile</h2>
+    
+            <!-- Profile Pic -->
+            <div class="contact-box-facebook">
+                <h2>Picture</h2>
+                <figure class="contact-images-facebook">
+                <!-- <img src="about/pictures/alecpeters2.jpg" alt="prof pic"> -->
+                </figure>
+            </div>
+    
+            <!-- Connection -->
+            <div class="connection-box-facebook">
+                <h2>Connection</h2>
+                <figure class="contact-images-facebook">
+                <!-- <p>You are Alec's friend</p> -->
+                </figure>
+            </div>
+    
+            <!-- Mutual Friends -->
+            <div class="mutual-friends-box-facebook">
+                <h2>Connection</h2>
+                <figure class="contact-images-facebook">
+                <!-- <p>You have 21 mutal friends with Alec</p> -->
+                </figure>
+            </div>
+    
+            <!-- Access -->
+            <div class="access-box-facebook">
+                <h2>Access</h2>
+                <figure class="contact-images-facebook">
+                <!-- <p>Alec is currently logged in from a residential location</p> -->
+                </figure>
+            </div>
+    
+            <!-- Friends -->
+            <div class="friends-box-facebook">
+                <h2>Friends</h2>
+                <figure>
+                <!-- <figcaption><a href="#">harry styles</a></figcaption>
+                <img src="about/pictures/harrystyles.jpeg"> -->
+                </figure>
+    
+                <figure>
+                <!-- <figcaption><a href="#">mick jagger</a></figcaption>
+                <img src="about/pictures/mickjagger.jpeg"> -->
+                </figure>
+    
+                <figure>
+                <!-- <figcaption><a href="#">beyonce</a></figcaption>
+                <img src="about/pictures/beyonce.jpeg"> -->
+                </figure>
+    
+                <figure>
+                <!-- <figcaption><a href="#">edgar allan poe</a></figcaption>
+                <img src="about/pictures/eap.jpg"> -->
+                </figure>
+    
+                <figure>
+                <!-- <figcaption><a href="#">timothee chalamet</a></figcaption>
+                <img src="about/pictures/timmy.jpeg"> -->
+                </figure>
+    
+                <figure>
+                <!-- <figcaption><a href="#">paul newman</a></figcaption>
+                <img src="about/pictures/paulnewman.jpeg"> -->
+                </figure>
+    
+                <figure>
+                <!-- <figcaption><a href="#">leonardo dicaprio</a></figcaption>
+                <img src="about/pictures/leo.jpeg"> -->
+                </figure>
+    
+                <figure>
+                <!-- <figcaption><a href="#">cleopatra</a></figcaption>
+                <img src="about/pictures/cleopatra.jpeg"> -->
+                </figure>
+            </div>
+    
+            <div class="header-2-facebook"></div>
+    
+            <!-- Right Main Section -->
+            <div class="info-box-facebook">
+                <h2>Information</h2>
+                <table class="sidebar-table-facebook">
+                <tbody>
+                    <tr>
+                    <!-- <th class="sidebar-table-header" scope="row">General</th>
+                    <td class="sidebar-table-data">
+                    <p>60s & early 70s rock, Movies, Basketball, Thrift shopping, Playing guitar, Writing Music, Trivia, Indoor Waterparks</p> -->
+                    </td>
+                    </tr>
+                </tbody>
                 </table>
-          
-              </section>
             </div>
           </div>
-      
-          <script src="./script.js"></script>
-    </body>
+          <!-- Profile Box Ends -->
+    
+        </div>
+        <!-- Main Section Ends -->
+    
+        <!-- Footer -->
+      </div>
+    
+      <footer class="footer-facebook">
+        <small>©facebook.com. All Rights Reserved.</small>
+      </footer>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
 </html>
