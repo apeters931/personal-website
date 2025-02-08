@@ -56,11 +56,12 @@ Tabs
 
 .tabs {
   font-size: 0;
+  margin: auto;
   margin-bottom:10px;
+  width: 915px;
 }
 
 .myspace-button {
-  margin-left: 278px;;
   border: 1px solid rgb(0, 153, 106);
   padding: 10px 24px;
   border-radius: 0px;
@@ -219,8 +220,8 @@ Page Content Container
 */
 .page-content-container {
   display: grid;
-  grid-template-columns: 325px 453px;
-  grid-column-gap: 20px;
+  grid-template-columns: 375px 453px;
+  grid-column-gap: 45px;
   grid-template-areas: "sidebar main";
 }
   
@@ -231,7 +232,7 @@ Profile Sidebar Column
 */
 .profile-sidebar {
   grid-area: sidebar;
-  margin-left: 27px;
+  margin-left: 53px;
   width: 300px;
 }
 

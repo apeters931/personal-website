@@ -56,11 +56,12 @@ Tabs
 
 .tabs {
   font-size: 0;
+  margin: auto;
   margin-bottom:10px;
+  width: 915px;
 }
 
 .myspace-button {
-  margin-left: 278px;;
   border: 1px solid rgb(0, 153, 106);
   padding: 10px 24px;
   border-radius: 0px;
