@@ -380,7 +380,7 @@ Tabs
   border-right: 1px solid rgb(0, 153, 106);
   color: rgb(0, 153, 106);
   border-top: 1px solid rgb(0, 153, 106);
-  border-bottom: .5px solid rgb(0, 153, 106);
+  border-bottom: 1px solid rgb(0, 153, 106);
 }
 
 .poke-button {
@@ -399,7 +399,6 @@ Tabs
   border-right: 1px solid rgb(0, 153, 106);
   color: rgb(0, 153, 106);
   border-bottom: 1px solid rgb(0, 153, 106);
-  border-top: .5px solid rgb(0, 153, 106);
 }
 
 .contact-box img {
