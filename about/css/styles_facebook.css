@@ -184,14 +184,25 @@ Tabs
    justify-self: end;
  }
 
-.list-options {
+ /*
+ ========================================
+ List Options
+ ========================================
+ */
+
+ .list-options {
   width: 200px;
   height: 175px;
-  margin-top: 5px;
-  padding-left: 10px;
-  padding-top: 10px;
   font-size: 15px;
   border: 2px dashed rgb(0, 153, 106);
+}
+
+.list-options ul {
+  padding-left: 15px;
+}
+
+.list-options li {
+  margin-top: 3px;
 }
  
  /*
@@ -335,9 +346,9 @@ Tabs
     grid-column-end: 2;
     display: grid;
     grid-template-columns: 310px 385px;
-    grid-template-rows: 30px 165px 65px 85px 85px 550px;
+    grid-template-rows: 30px 165px 30px 45px 65px 65px 85px 575px;
     border: 2px solid rgb(0, 153, 106);
-    height: 1000px;
+    height: 1077px;
     width: 697px;
     margin-top: 4px;
     margin-bottom: 10px;
@@ -355,46 +366,110 @@ Tabs
    margin-left: 10px;
 }
 
+.message-button {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  margin-left: 10px;
+  padding-top: 6px;
+  padding-left: 15px;
+  font-size: 13px;
+  background-color: white;
+  border-left: 1px solid rgb(0, 153, 106);
+  border-right: 1px solid rgb(0, 153, 106);
+  color: rgb(0, 153, 106);
+  border-top: 1px solid rgb(0, 153, 106);
+  border-bottom: .5px solid rgb(0, 153, 106);
+}
+
+.poke-button {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  height: 30px;
+  margin-left: 10px;
+  margin-left: 10px;
+  padding-top: 6px;
+  padding-left: 15px;
+  font-size: 13px;
+  background-color: white;
+  border-left: 1px solid rgb(0, 153, 106);
+  border-right: 1px solid rgb(0, 153, 106);
+  color: rgb(0, 153, 106);
+  border-bottom: 1px solid rgb(0, 153, 106);
+  border-top: .5px solid rgb(0, 153, 106);
+}
+
+.contact-box img {
+  margin: auto;
+  margin-top: 5px;
+  display: block;
+}
+
 .connection-box {
     grid-column-start: 1;
     grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 5;
     border: 2px solid rgb(0, 153, 106);
     height: 50px;
     width: 300px;
     margin-left: 10px;
 }
 
+.connection-box p {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 13px;
+    display: block;
+}
+
 .mutual-friends-box {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    border: 2px solid rgb(0, 153, 106);
-    height: 70px;
-    width: 300px;
-    margin-left: 10px;
-}
-
-.access-box {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
-    border: 2px solid rgb(0, 153, 106);
-    height: 70px;
-    width: 300px;
-    margin-left: 10px;
-}
-
-.friends-box {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 6;
     grid-row-end: 6;
     border: 2px solid rgb(0, 153, 106);
-    height: 555px;
+    height: 50px;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.mutual-friends-box p {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 13px;
+  display: block;
+}
+
+.access-box {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    border: 2px solid rgb(0, 153, 106);
+    height: 70px;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.access-box p {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 13px;
+  display: block;
+}
+
+.friends-box {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    border: 2px solid rgb(0, 153, 106);
+    height: 580px;
     width: 300px;
     margin-left: 10px;
 }
@@ -405,9 +480,23 @@ Tabs
     grid-row-start: 2;
     grid-row-end: 6;
     border: 2px solid rgb(0, 153, 106);
-    height: 955px;
+    height: 1035px;
     width: 365px;
     margin-left: 10px;
+    font-size: 11.75px;
+}
+
+.info-box table {
+  margin-top: 1px;
+}
+
+.info-box td {
+  min-width: 100px;
+  vertical-align: top;
+}
+
+.info-box th {
+  text-align: left;
 }
  
 .contact-box h2 {
@@ -452,6 +541,15 @@ Tabs
     padding-left: 10px;
 }
 
+.friends-box table {
+  margin-left: 0px;
+}
+
+.friends-box td {
+  min-width: 145px;
+  text-align: center;
+}
+
 .info-box h2 {
     color: white;
     background-color: rgb(0, 153, 106);
@@ -459,12 +557,8 @@ Tabs
     padding-left: 10px;
 }
  
- .contact-images {
-   display: grid;
-   grid-template-columns: 150px 150px;
-   margin: 0;
-   margin-top: 5px;
-   margin-left: 10px;
+ .profile-picture {
+   margin: auto;
  }
 
  .header-2 {
