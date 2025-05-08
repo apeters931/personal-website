@@ -94,13 +94,17 @@ nav {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .img {
     display: block;
     margin: auto;
     cursor: pointer;
+    padding-left: 170px;
+}
+.img:hover {
+    content: url('img/headshot-talking2.png');  /* Changes image on hover */
 }
 
 .hide-objects {
