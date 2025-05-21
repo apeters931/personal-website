@@ -114,8 +114,12 @@ nav {
 }
 
 #board {
-    background-color: white;
-    border-bottom: 1px solid black;
+    width: 850px;
+    height: 400px;
+    background: url('img/track_b.png') repeat-x;
+    background-position: 0 0;;
+    /*border-bottom: 1px solid black;*/
+    /*border-image: url('img/track.png') 28 round;*/
 }
 
 canvas {

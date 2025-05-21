@@ -1,92 +1,106 @@
 
-// nav 
+/*
+====================
+HAMBURGER NAVIGATION
+====================
+*/
+// set hamMenu variable and offScreenMenu 
 const hamMenu = document.querySelector(".ham-menu");
-
 const offScreenMenu = document.querySelector(".off-screen-menu");
-
+// whenever the hamburger icon gets clicked toggle the active class on and off
+// off screen menu starts as the default then when clicked off-screen is removed and ham menu is activated
 hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
   offScreenMenu.classList.toggle("active");
 });
 
-const img = document.querySelector(".img");
-var header = document.getElementById("header");
 
-img.addEventListener("click", () => {
+/*
+===================
+DINOSAUR T-REX GAME
+===================
+*/
+// create variable for main headshot on homepage
+const mainHeadshotImg = document.querySelector(".img");
+// create variable for the header container
+var header = document.getElementById("header");
+// If the headshot is clicked hide what was shown in the main header and show the dino game board
+// This section is what triggers the dino game function
+mainHeadshotImg.addEventListener("click", () => {
     board.classList.remove("hide-objects");
     header.classList.add("hide-objects");
-    main();
+    dino_game();
 });
 
-function main() {
+// main function for dino game
+function dino_game() {
+    // get board elemtent and create variable for it 
     var board = document.getElementById("board");
-
-    //board
+    // set game board width and height
     let boardWidth = 850;
     let boardHeight = 400;
+    // ?
     let context;
-
-    //dino
+    // set the size of the dino player
     let dinoWidth = 120;
     let dinoHeight = 210;
+    // position on the road for the dino
     let dinoX = 50;
+    // position of the top of the dino's head when standing on the road
     let dinoY = boardHeight - dinoHeight;
     let dinoImg;
     let dino1;
     let dino2;
     let dinoType = '1'
-
     //speech bubble
     let speecBubbleImg;
     let speechBubbleLoretta;
     let speechBubbleFranny;
     let speechBubblePiccadilly;
-
+    // dino values
     let dino = {
         x : dinoX,
         y : dinoY,
         width : dinoWidth,
         height : dinoHeight
     }
-
-    //cactus
+    // cactus
+    // array cacti will be added to, to get placed
     let cactusArray = [];
-
-    let cactus1Width = 100;
-    let cactus2Width = 100;
-    let cactus3Width = 135;
-
-    let cactusHeight = 100;
+    // size of loretta's image
+    let lorettaWidth = 135;
+    let lorettaHeight = 63;
+    // size of franny's image
+    let frannyWidth = 135;
+    let frannyHeight = 63;
+    let cactus3Width = 200;
+    let cactus3Height = 91;
     let cactusX = 700;
-    let cactusY = boardHeight - cactusHeight;
-
+    let cactus1Y = boardHeight - lorettaHeight;
+    let cactus2Y = boardHeight - frannyHeight;
+    let cactus3Y = boardHeight - cactus3Height;
     let cactus1Img;
     let cactus2Img;
     let cactus3Img;
-
     // game over
     let gameOverImg;
     let replayImg;
-
-    //physics
-    let velocityX = -10; //cactus moving left speed
+    // physics
+    // cactus moving left speed
+    let velocityX = -10;
     let velocityY = 0;
     let gravity = .6;
-
     let gameOver = false;
-    let playAgain = false;
     let wasClicked;
+    let clickCount = 0;
     let score = 0;
-
+    // string version of the score that appears on the board with leading zeros
+    let display_score;
 
     board.height = boardHeight;
     board.width = boardWidth;
-
-    context = board.getContext("2d"); //used for drawing on the board
-
-    //draw initial dinosaur
-    // context.fillStyle="green";
-    // context.fillRect(dino.x, dino.y, dino.width, dino.height);
+    // used for drawing on the board
+    context = board.getContext("2d");
 
     dino1 = new Image();
     dino1.src = "./img/player.png";
@@ -104,13 +118,13 @@ function main() {
     speechBubblePiccadilly.src = "./img/speechBubblePiccadilly.png";
 
     cactus1Img = new Image();
-    cactus1Img.src = "./img/loretta.png";
+    cactus1Img.src = "./img/loretta2.png";
 
     cactus2Img = new Image();
-    cactus2Img.src = "./img/franny.png";
+    cactus2Img.src = "./img/franny1.png";
 
     cactus3Img = new Image();
-    cactus3Img.src = "./img/pickle.png";
+    cactus3Img.src = "./img/cats4.png";
 
     gameOverImg = new Image();
     gameOverImg.src = "./img/game-over.png";
@@ -119,11 +133,11 @@ function main() {
     replayImg.src = "./img/reset.png";
 
     requestAnimationFrame(update);
-    setInterval(placeDino, 200); //1000 milliseconds = 1 second
-    setInterval(placeCactus, 1000); //1000 milliseconds = 1 second
+    // 1000 milliseconds = 1 second
+    setInterval(placeDino, 200);
+    // 1000 milliseconds = 1 second
+    setInterval(placeCactus, 800);
     document.addEventListener("keydown", moveDino);
-
-
 
     function update() {
         requestAnimationFrame(update);
@@ -132,12 +146,12 @@ function main() {
         }
         context.clearRect(0, 0, board.width, board.height);
 
-        //dino
         velocityY += gravity;
-        dino.y = Math.min(dino.y + velocityY, dinoY); //apply gravity to current dino.y, making sure it doesn't exceed the ground
+        // apply gravity to current dino.y, making sure it doesn't exceed the ground
+        dino.y = Math.min(dino.y + velocityY, dinoY);
         context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
 
-        //cactus
+        // cactus
         for (let i = 0; i < cactusArray.length; i++) {
             let cactus = cactusArray[i];
             cactus.x += velocityX;
@@ -162,25 +176,23 @@ function main() {
                     context.drawImage(gameOverImg, 240, 150);
                 }
                 context.drawImage(replayImg, 390, 200);
-                board.addEventListener("click", wasClicked, true);
-                if (wasClicked) {
-                    console.log("true")
-                };
-                board.addEventListener("click", function(){
-                    console.log("test")
-                    playAgain = true;
-                    if (playAgain) {
-                        main();
-                    };
-                });
             }
         }
-
-        //score
+        // score ticker
+        // style to fill
         context.fillStyle="black";
+        // font
         context.font="30px courier";
+        // increment score by 1 while game is running
         score++;
-        context.fillText(score,  5, 30);
+        // add leading zeros and convert to string for adding to game board
+        displayScore = score.toString().padStart(6, '0');
+        // print to game board in the x,y cordinates listed
+        context.fillText(displayScore,  745, 30);
+        // change speed as score increases
+        velocityX = velocityX - 0.001;
+        console.log(velocityX);
+
     }
 
     function placeDino() {
@@ -230,30 +242,28 @@ function main() {
         let cactus = {
             img : null,
             x : cactusX,
-            y : cactusY,
+            y : null,
             width : null,
-            height: cactusHeight,
+            height: null,
             type: null
         }
 
         let placeCactusChance = Math.random(); //0 - 0.9999...
 
-        if (placeCactusChance > .90) { //10% you get cactus3
-            cactus.img = cactus3Img;
-            cactus.type = 'piccadilly';
-            cactus.width = cactus3Width;
-            cactusArray.push(cactus);
-        }
-        else if (placeCactusChance > .70) { //30% you get cactus2
+        if (placeCactusChance < .25) {
             cactus.img = cactus2Img;
+            cactus.y = cactus2Y
             cactus.type = 'franny';
-            cactus.width = cactus2Width;
+            cactus.width = frannyWidth;
+            cactus.height = frannyHeight;
             cactusArray.push(cactus);
         }
-        else if (placeCactusChance > .50) { //50% you get cactus1
+        else if (placeCactusChance > .75) {
             cactus.img = cactus1Img;
+            cactus.y = cactus1Y
             cactus.type = 'loretta';
-            cactus.width = cactus1Width;
+            cactus.width = lorettaWidth;
+            cactus.height = lorettaHeight;
             cactusArray.push(cactus);
         }
 
@@ -268,4 +278,23 @@ function main() {
             a.y < b.y + b.height &&  //a's top left corner doesn't reach b's bottom left corner
             a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
     }
+
+    const bg = document.getElementById('board');
+    let posX = 0;
+
+    function moveBackground() {
+        if (gameOver) {
+            return;
+        }
+        posX += velocityX; // adjust speed here
+        bg.style.backgroundPosition = `${posX}px 0`;
+        requestAnimationFrame(moveBackground);
+    }
+
+    moveBackground();
 }
+
+// if the game board is clicked the game starts over
+board.addEventListener("click", function(){
+    dino_game();
+});
