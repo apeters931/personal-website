@@ -38,7 +38,7 @@ function dino_game() {
     var board = document.getElementById("board");
     // set game board width and height
     let boardWidth = 850;
-    let boardHeight = 400;
+    let boardHeight = 360;
     // ?
     let context;
     // set the size of the dino player
@@ -49,11 +49,15 @@ function dino_game() {
     // position of the top of the dino's head when standing on the road
     let dinoY = boardHeight - dinoHeight;
     let dinoImg;
+    let dinoDeadImg;
     let dino1;
+    let dinoDead1;
     let dino2;
+    let dinoDead2;
     let dinoType = '1'
     //speech bubble
     let speecBubbleImg;
+    let awakeCactusImg;
     let speechBubbleLoretta;
     let speechBubbleFranny;
     let speechBubblePiccadilly;
@@ -108,6 +112,12 @@ function dino_game() {
     dino2 = new Image();
     dino2.src = "./img/player2.png";
 
+    dinoDead = new Image();
+    dinoDead.src = "./img/playerDead.png";
+
+    dinoDead2 = new Image();
+    dinoDead2.src = "./img/player2Dead.png";
+
     speechBubbleLoretta = new Image();
     speechBubbleLoretta.src = "./img/speechBubbleLoretta.png";
 
@@ -119,9 +129,13 @@ function dino_game() {
 
     cactus1Img = new Image();
     cactus1Img.src = "./img/loretta2.png";
+    cactus1ImgAwake = new Image();
+    cactus1ImgAwake.src = "./img/loretta_awake.png";
 
     cactus2Img = new Image();
     cactus2Img.src = "./img/franny1.png";
+    cactus2ImgAwake = new Image();
+    cactus2ImgAwake.src = "./img/franny_awake.png";
 
     cactus3Img = new Image();
     cactus3Img.src = "./img/cats4.png";
@@ -160,22 +174,24 @@ function dino_game() {
             if (detectCollision(dino, cactus)) {
                 gameOver = true;
                 if (cactus.type == 'loretta') {
-                    speecBubbleImg = speechBubbleLoretta;
+                    awakeCactusImg = cactus1ImgAwake;
                 }
                 else if (cactus.type == 'franny') {
-                    speecBubbleImg = speechBubbleFranny;
+                    awakeCactusImg = cactus2ImgAwake;
+                }
+                if (dinoType == '1') {
+                    dinoDeadImg = dinoDead
                 }
                 else {
-                    speecBubbleImg = speechBubblePiccadilly;
+                    dinoDeadImg = dinoDead2
                 }
-                context.drawImage(speecBubbleImg, dino.x + 50, dino.y - 70, 210, 100);
-                if (dino.y == dinoY) {
-                    context.drawImage(gameOverImg, 240, 30);
-                }
-                else {
-                    context.drawImage(gameOverImg, 240, 150);
-                }
-                context.drawImage(replayImg, 390, 200);
+                context.drawImage(dinoDeadImg, dino.x, dino.y, dino.width, dino.height)
+                // draw cats with eyes open
+                context.drawImage(awakeCactusImg, cactus.x, cactus.y)
+                // draw gameover and replay screen
+                context.drawImage(gameOverImg, 240, 110);
+                context.drawImage(replayImg, 390, 160);
+                
             }
         }
         // score ticker
