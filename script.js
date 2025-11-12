@@ -57,7 +57,6 @@ function dino_game() {
     let dinoType = '1'
     //speech bubble
     let speecBubbleImg;
-    let awakeCactusImg;
     let speechBubbleLoretta;
     let speechBubbleFranny;
     let speechBubblePiccadilly;
@@ -129,13 +128,9 @@ function dino_game() {
 
     cactus1Img = new Image();
     cactus1Img.src = "./img/loretta2.png";
-    cactus1ImgAwake = new Image();
-    cactus1ImgAwake.src = "./img/loretta_awake.png";
 
     cactus2Img = new Image();
     cactus2Img.src = "./img/franny1.png";
-    cactus2ImgAwake = new Image();
-    cactus2ImgAwake.src = "./img/franny_awake.png";
 
     cactus3Img = new Image();
     cactus3Img.src = "./img/cats4.png";
@@ -173,12 +168,6 @@ function dino_game() {
 
             if (detectCollision(dino, cactus)) {
                 gameOver = true;
-                if (cactus.type == 'loretta') {
-                    awakeCactusImg = cactus1ImgAwake;
-                }
-                else if (cactus.type == 'franny') {
-                    awakeCactusImg = cactus2ImgAwake;
-                }
                 if (dinoType == '1') {
                     dinoDeadImg = dinoDead
                 }
@@ -186,8 +175,6 @@ function dino_game() {
                     dinoDeadImg = dinoDead2
                 }
                 context.drawImage(dinoDeadImg, dino.x, dino.y, dino.width, dino.height)
-                // draw cats with eyes open
-                context.drawImage(awakeCactusImg, cactus.x, cactus.y)
                 // draw gameover and replay screen
                 context.drawImage(gameOverImg, 240, 110);
                 context.drawImage(replayImg, 390, 160);
