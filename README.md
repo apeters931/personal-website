@@ -1,1 +1,1 @@
-Visit the website [here](https://apeters931.github.io/personal-website/)
+Visit the website [here](http://www.alecpeters.info/)
