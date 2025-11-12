@@ -115,7 +115,7 @@ function dino_game() {
     dinoDead.src = "./img/playerDead.png";
 
     dinoDead2 = new Image();
-    dinoDead2.src = "./img/player2Dead.png";
+    dinoDead2.src = "./img/Player2Dead.png";
 
     speechBubbleLoretta = new Image();
     speechBubbleLoretta.src = "./img/speechBubbleLoretta.png";
