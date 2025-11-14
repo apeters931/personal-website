@@ -172,6 +172,7 @@ canvas {
     outline: none;
     padding-left: 25px;
     font-weight: 500;
+    border-radius: 20px;
 }
 
 .contact-left textarea {
@@ -193,6 +194,10 @@ canvas {
     gap: 10px;
     border: none;
     border-radius: 50px;
-    background-color: #77cc8b;
+    background-color: rgb(0, 153, 106);
     cursor: pointer;
+}
+
+.contact-left button:hover {
+    background-color: #77cc8b;
 }
