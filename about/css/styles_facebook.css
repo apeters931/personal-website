@@ -346,9 +346,10 @@ Tabs
     grid-column-end: 2;
     display: grid;
     grid-template-columns: 310px 385px;
-    grid-template-rows: 30px 165px 30px 45px 65px 65px 85px 575px;
+    grid-template-rows: 30px 165px 30px 45px 65px 65px 85px minmax(580px, auto);
     border: 2px solid rgb(0, 153, 106);
-    height: 1077px;
+    min-height: 1077px;
+    padding-bottom: 8px;
     width: 697px;
     margin-top: 4px;
     margin-bottom: 10px;
@@ -477,9 +478,10 @@ Tabs
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 2;
-    grid-row-end: 6;
+    grid-row-end: 9;
     border: 2px solid rgb(0, 153, 106);
-    height: 1035px;
+    min-height: 1035px;
+    padding-bottom: 8px;
     width: 365px;
     margin-left: 10px;
     font-size: 11.75px;
@@ -971,21 +973,28 @@ Tabs
    max-width: 250px;
    position: fixed;
    top: 0;
-   right: -450px;
+   left: -450px;
    display: flex;
    flex-direction: column;
-   align-items: center;    
-   justify-content: center;
-   text-align: center;
+   align-items: flex-start;
+   justify-content: flex-start;
+   padding-top: clamp(6rem, 12vh, 8rem);
+   padding-left: 1rem;
+   text-align: left;
    font-size: 3rem;
    transition: .3s ease;
    font-family: sans-serif;
    text-decoration: none;
  }
  .off-screen-menu.active {
-   right: 0;
+   left: 0;
    font-family: sans-serif;
    text-decoration: none;
+ }
+
+ .off-screen-menu ul {
+   margin: 0;
+   padding: 0;
  }
  
  /* nav */
@@ -1002,7 +1011,7 @@ Tabs
  .ham-menu {
    height: 50px;
    width: 40px;
-   margin-left: auto;
+   margin-right: auto;
    position: relative;
  }
  .ham-menu span {
@@ -1036,4 +1045,3 @@ Tabs
    top: 50%;
    transform: translate(-50%, -50%) rotate(-45deg);
  }
- 
